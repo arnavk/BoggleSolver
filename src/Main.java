@@ -17,7 +17,7 @@ public class Main {
 			e.printStackTrace();
 		}
 		long time_start = System.currentTimeMillis();
-		HashSet<String> words = solver.foundWords(matrix, true);
+		HashSet<String> words = solver.findWords(matrix, true);
 		long time_end = System.currentTimeMillis();
 		System.out.println("time spent finding words: " + (time_end - time_start));
 		Iterator<String> it = words.iterator();

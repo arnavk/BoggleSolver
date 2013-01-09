@@ -78,7 +78,10 @@ public class Solver {
 			st_machine.transition_backward();
 	}
 	
-	public HashSet<String> foundWords(char matrix[][]) {
+	// Returns dictionary words found in the 2d array
+	// 'q' is treated as 'qu' by default
+	// call the overloaded method if you want 'q' to be treated as is
+	public HashSet<String> findWords(char matrix[][]) {
 		for (int i = 0; i < matrix.length; i++) {
 			for (int j = 0; j < matrix[0].length; j++) {
 				check(matrix, i, j);
@@ -87,8 +90,11 @@ public class Solver {
 		return words_;
 	}
 	
-	public HashSet<String> foundWords(char matrix[][], boolean qIsQu) {
+	// First param: 2D array of characters
+	// Second param: Boolean value. If true, 'q' is treated as 'qu' else 'q' is treated as is.
+	// Returns dictionary words found in the 2d array
+	public HashSet<String> findWords(char matrix[][], boolean qIsQu) {
 		q_is_qu_flag = qIsQu;
-		return foundWords(matrix);
+		return findWords(matrix);
 	}
 }
