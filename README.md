@@ -1,4 +1,7 @@
-N x M Boggle solver implemented in Java.
+N x M Boggle solver implemented in Java. 
+Feel free to edit the code. I probably made a bunch of bad design decisions.
+Would be good if you add why it was a bad design.
+
 
 How to use:
  - look in Main.java for example
